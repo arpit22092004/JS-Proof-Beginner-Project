@@ -1,0 +1,44 @@
+// create a variable to hold your NFT's
+let NFTs = [];
+// this function will take in some values as parameters, create an
+// NFT object using the parameters passed to it for its metadata, 
+// and store it in the variable above.
+function mintNFT (name , devil_fruit , type , attack , defense , weakness , level) {
+    let NFT = {
+        name: name,
+        devil_fruit: devil_fruit,
+        type: type,
+        attack: attack,
+        defense: defense,
+        weakness: weakness,
+        level: level
+    }
+    NFTs.push(NFT);
+}
+// create a "loop" that will go through an "array" of NFT's
+// and print their metadata with console.log()
+function listNFTs () {
+    for (let i = 0; i < NFTs.length; i++) {
+        console.log("\n\n                  ONE PIECE CARD                      \n\n" );
+        console.log("Name: " + NFTs[i].name);
+        console.log("Devil_fruit: " + NFTs[i].devil_fruit);
+        console.log("Type: " + NFTs[i].type);
+        console.log("Attack: " + NFTs[i].attack);
+        console.log("Defense: " + NFTs[i].defense);
+        console.log("Speed: " + NFTs[i].weakness);
+        console.log("Level: " + NFTs[i].level);
+        console.log("\n\n                     * * * *                      \n" );
+    }
+}
+// print the total number of NFTs we have minted to the console
+function getTotalSupply() {
+    console.log("Total NFTs of 'One piece card' minted do far  " + NFTs.length);
+}
+// call your functions below this line
+mintNFT("Luffy", "Gomu-Gomu no Mi", "Zoan-type and Paramecia-type", 100, 95, "Seastone", 4);
+mintNFT("Roronoa Zoro", "No Devil fruit", "None", 85, 80, "No sense of direction", 4);
+mintNFT("Vinsmoke Sanji", "No Devil fruit", "None", 80, 82, "Women", 3);
+mintNFT("Ace", "Mera-Mera no Mi", "Logia-type", 80, 82, "Seastone", 2);
+mintNFT("Sabo", "Mera-Mera no Mi", "Logia-type", 83, 82, "Seastone", 3);
+listNFTs();
+getTotalSupply();
